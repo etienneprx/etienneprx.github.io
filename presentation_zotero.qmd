@@ -1,0 +1,198 @@
+---
+title: "Zotero"
+subtitle: "Gestion des références et automatisation"
+author: "Étienne Proulx"
+format: revealjs
+code-block-height: 350px
+incremental: true 
+theme: blood
+title-slide-attributes:
+    data-background-image: zotero.png
+    data-background-size: contain
+    data-background-opacity: "0.5"
+    
+---
+## Qu'est-ce que Zotero ? {.smaller}
+
+- Gestionnaire de références gratuit et open source
+- Compatible avec Windows, macOS, Linux, iOS, et Android
+- Gère des fichiers de recherche (PDF, images, etc.)
+- Intégration directe au navigateur web
+- Synchronisation des données sur tous tes appareils
+- Génération automatique de citations et bibliographies (Word, LibreOffice, OpenOffice, Overleaf et autres)
+
+
+---
+
+## Installation de Zotero {.smaller}
+
+1. **Rends-toi sur le site officiel**  
+   [zotero.org/download](https://www.zotero.org/download/)
+
+2. **Télécharge Zotero**  
+   Choisis la version correspondant à ton système d'exploitation (Windows, macOS, Linux).
+
+3. **Installe l'extension pour ton navigateur**  
+   Compatible avec Chrome, Firefox, Edge et Safari.
+
+4. **Synchronisation**  
+   Crée un compte Zotero pour synchroniser tes références sur plusieurs appareils.
+
+---
+
+## Personnalisation des paramètres Zotero {.smaller}
+
+1. **Synchronisation des données**  
+   - Dans **Préférences** > **Synchronisation**, entre ton **Nom d’utilisateur** et **Mot de passe** pour synchroniser tes appareils.
+
+2. **Désactiver les tags automatiques**  
+   - Dans **Préférences** > **Général** > **Divers**, décoche **Ajouter automatiquement les tags**.
+
+3. **Explorer les paramètres**  
+   - Explore les différentes options pour ajuster Zotero à tes besoins.
+
+---
+
+## Fonctions de bases de Zotero
+
+- Création de collections et de sous collections
+    - Organisation des références
+- Ajout de références
+    - Plusieurs méthodes (drag and drop, manuellement, à partir du browser, à partir de bases de données et autres)
+
+---
+
+
+### Quelques exemples concrets [1/2]
+Création de collections
+
+![](collections1.png){.absolute width="550" height="400" left=220 top=250}
+
+---
+
+### Quelques exemples concrets [2/2]
+ Importer des références
+
+::: {.r-stack}
+![](baguettes-magique.png){.fragment}
+
+![](browser.png){.fragment}
+
+![](sofia.png){.fragment}
+
+![](webofscience1.png){.fragment}
+
+![](webofscience2.png){.fragment}
+:::
+---
+
+### Générer des bibliographies [1/2]
+
+::: {.r-stack}
+![](biblio1.png){.fragment}
+
+![](biblio2.png){.fragment height=600}
+
+:::
+---
+
+### Générer des bibliographies [2/2]
+
+- Zotero a aussi des add-ins sur Word, Google Docs et LibreOffice
+    - Pour configurer les add-ins: **Settings** > **Cite** > **Word Processors** > puis configurez selon votre logiciel de traitement de texte
+- Possibilité d'exporter des collections Zotero pour des fichier LaTeX, Markdown ou Quarto
+
+---
+
+## Explorer les plugins Zotero{.smaller}
+### Qu'est-ce qu'un plugin ?
+
+- Un **plugin** est une extension qui ajoute des fonctionnalités supplémentaires à un logiciel principal.
+- Permet d'améliorer l'expérience utilisateur sans modifier le cœur du logiciel.
+- Les utilisateurs choisissent les plugins qui répondent à leurs besoins spécifiques.
+
+---
+
+## Plugins Zotero : Pourquoi les utiliser?{.smaller}
+
+- **Extension des fonctionnalités** : Ajout de fonctions comme la gestion avancée des PDFs avec [**ZotFile**](https://zotfile.com/) ou [**ZotMoov**](https://guides.lib.berkeley.edu/zotero/zotfile).
+    - Ces plugins sont essentiels pour avoir une sauvegarde en local de nos PDFs
+- **Personnalisation** : Adapte Zotero à vos besoins de recherche avec des outils comme [**Better BibTeX**](https://retorque.re/zotero-better-bibtex/) pour LaTeX.
+- **Développé par la communauté** : La plupart des plugins Zotero sont créés par des utilisateurs pour répondre à des besoins concrets.
+
+---
+
+## Exporter un .bib avec Better BibTeX [1/2]
+
+- **Better BibTeX** permet d'exporter des collections Zotero au format `.bib`.
+- Le fichier `.bib` est mis à jour automatiquement en local à chaque modification dans Zotero.
+- Idéal pour les projets LaTeX nécessitant des références bibliographiques à jour.
+
+---
+
+### Exporter un .bib avec Better BibTeX [2/2]
+
+::: {.r-stack}
+![](bibtex1.png){.fragment}
+
+![](bibtex2.png){.fragment}
+:::
+---
+
+## Utiliser le .bib dans LaTeX [1/2]
+
+Commandes LaTeX pour utiliser une collection exportée :
+
+```latex{}
+\documentclass{article}
+\usepackage[style=apa,backend=biber]{biblatex} % Utilisation de biblatex avec Biber pour APA
+\usepackage{csquotes}  % Nécessaire pour biblatex et les citations
+\addbibresource{collection.bib} % Ajoute le chemin vers fichier .bib
+
+\title{Exemple d'utilisation de \texttt{Better BibTeX} avec \texttt{biblatex}}
+\author{Étienne Proulx}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+Voici un exemple de citation avec : \parencite{dzambazovic_gerbery21}. Ou bien en voici un autre: \parencite{belanger_perrella09}.
+
+Voici un autre exemple avec : \textcite{dzambazovic_gerbery21}. \textcite{huang24} a dit ceci ou cela.
+
+
+\printbibliography  % Affiche la bibliographie
+
+\end{document}
+```
+---
+
+## Utiliser le .bib dans LaTeX [2/2] {.scrollable}
+
+[![](pdf_latex.png)](test_zotero.pdf)
+
+---
+
+## Workflow pour la prise de notes [1/2]
+- Utile pour annoter nos références dans le cadre d'une revue de littérature
+- Utile pour prendre des notes sur des lectures liées à un cours
+- Étude pour un examen : possibilité de générer des rapports à partir d'une collection
+
+---
+
+## Workflow pour la prise de notes [2/2]
+
+::: {.r-stack}
+![](note1.png){.fragment height=500}
+
+![](note2.png){.fragment height=500}
+:::
+---
+
+## Ressources complémentaires
+
+- [**Ressources Zotero de l'Université Laval**](https://www.bibl.ulaval.ca/services/logiciels-bibliographiques/zotero)
+- [**Formations individuelles Zotero de l'Université Laval**](https://www.bibl.ulaval.ca/formations/formations-individuelles-sur-zotero)
+- [**Site officiel de Zotero**](https://www.zotero.org/support/)
+- [**Sub Reddit r/Zotero**](https://www.reddit.com/r/zotero/) (Utiles pour avoir des avis sur différents plugins et pour savoir comment résoudre des problèmes communs)
