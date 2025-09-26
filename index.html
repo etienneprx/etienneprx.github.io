@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Étienne Proulx - Formations et Ressources</title>
+    <title>Étienne Proulx</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -11,167 +14,167 @@
             box-sizing: border-box;
         }
 
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #1a1a1a;
+            --text-primary: #e0e0e0;
+            --text-secondary: #a0a0a0;
+            --accent: #00ff88;
+            --border: #333;
+        }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'JetBrains Mono', monospace;
+            background: var(--bg-primary);
+            color: var(--text-primary);
             line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 2rem;
         }
 
         .header {
+            margin-bottom: 4rem;
             text-align: center;
-            margin-bottom: 50px;
-            color: white;
-            padding: 40px 0;
         }
 
         .header h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 1rem;
+            letter-spacing: -1px;
         }
 
-        .header p {
+        .header .subtitle {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            font-weight: 300;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .section {
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
             font-size: 1.2rem;
-            opacity: 0.9;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
-        .content {
+        .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            margin-bottom: 50px;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
         }
 
         .card {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
-            overflow: hidden;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            padding: 2rem;
+            transition: all 0.3s ease;
         }
 
         .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-        }
-
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(45deg, #667eea, #764ba2);
-        }
-
-        .card h2 {
-            color: #5a67d8;
-            margin-bottom: 15px;
-            font-size: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .card .duration {
-            background: #e2e8f0;
-            color: #4a5568;
-            padding: 4px 8px;
-            border-radius: 12px;
-            font-size: 0.8rem;
-            font-weight: 500;
-        }
-
-        .card .level {
-            background: #fef5e7;
-            color: #dd6b20;
-            padding: 4px 8px;
-            border-radius: 12px;
-            font-size: 0.8rem;
-            font-weight: 500;
-            margin-left: 8px;
-        }
-
-        .card p {
-            margin-bottom: 20px;
-            color: #666;
-        }
-
-        .card .meta {
-            margin-bottom: 15px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .btn {
-            display: inline-block;
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            color: white;
-            padding: 12px 25px;
-            text-decoration: none;
-            border-radius: 25px;
-            transition: all 0.3s ease;
-            font-weight: 500;
-        }
-
-        .btn:hover {
+            border-color: var(--accent);
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
 
-        .btn.external::after {
+        .card-title {
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .card-meta {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .card-meta span {
+            background: var(--bg-primary);
+            padding: 0.2rem 0.5rem;
+            border: 1px solid var(--border);
+        }
+
+        .card-description {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+
+        .card-link {
+            display: inline-block;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            border: 1px solid var(--accent);
+            padding: 0.5rem 1rem;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .card-link:hover {
+            background: var(--accent);
+            color: var(--bg-primary);
+        }
+
+        .card-link.external::after {
             content: " ↗";
-            font-size: 0.9em;
+            font-size: 0.8em;
         }
 
         .about {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 15px;
-            padding: 40px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            padding: 2rem;
+            margin-top: 2rem;
         }
 
-        .about h2 {
-            color: #5a67d8;
-            margin-bottom: 20px;
-            font-size: 2rem;
+        .about p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
         }
 
         .footer {
             text-align: center;
-            margin-top: 50px;
-            color: white;
-            opacity: 0.8;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            color: var(--text-secondary);
+            font-size: 0.8rem;
         }
 
         @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
             .header h1 {
                 font-size: 2rem;
             }
 
-            .container {
-                padding: 10px;
-            }
-
-            .content {
+            .grid {
                 grid-template-columns: 1fr;
             }
 
-            .card .meta {
+            .card-meta {
                 flex-direction: column;
+                gap: 0.5rem;
             }
         }
     </style>
@@ -179,62 +182,62 @@
 <body>
     <div class="container">
         <header class="header">
-            <h1>Étienne Proulx</h1>
-            <p>Étudiant à la maîtrise en science politique | Formations et ressources académiques</p>
+            <h1>étienne_proulx</h1>
+            <p class="subtitle">
+                étudiant.recherche(science_politique) • influence_industrie_techno → discours_législatif_IA •
+                R.developer() • méthodes.quali() && méthodes.quanti()
+            </p>
         </header>
 
-        <main class="content">
-            <div class="card">
-                <h2>📊 Initiation à l'analyse des données avec R</h2>
-                <div class="meta">
-                    <span class="duration">3 heures</span>
-                    <span class="level">Débutant</span>
+        <section class="section">
+            <h2 class="section-title">formations</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3 class="card-title">initiation_analyse_données_R</h3>
+                    <div class="card-meta">
+                        <span>3h</span>
+                        <span>débutant</span>
+                        <span>sciences_sociales</span>
+                    </div>
+                    <p class="card-description">
+                        Formation complète pour débuter l'analyse de données avec R.
+                        Introduction à R, manipulation de données, visualisations de base, analyses statistiques élémentaires.
+                        Comprend présentation théorique, exercices pratiques et script R complet.
+                    </p>
+                    <a href="https://etienneprx.github.io/R_intro_fss/" class="card-link external">accéder</a>
                 </div>
-                <p>Formation complète pour débuter l'analyse de données avec R, spécialement conçue pour les étudiants en sciences sociales. Comprend présentation théorique, exercices pratiques et script R complet.</p>
-                <p><strong>Contenu :</strong> Introduction à R, manipulation de données, visualisations de base, analyses statistiques élémentaires.</p>
-                <a href="https://etienneprx.github.io/R_intro_fss/" class="btn external">Accéder à la formation</a>
-            </div>
 
-            <div class="card">
-                <h2>📚 Zotero - Gestion des références</h2>
-                <div class="meta">
-                    <span class="duration">Formation complète</span>
-                    <span class="level">Tous niveaux</span>
+                <div class="card">
+                    <h3 class="card-title">zotero_gestion_références</h3>
+                    <div class="card-meta">
+                        <span>formation_complète</span>
+                        <span>tous_niveaux</span>
+                    </div>
+                    <p class="card-description">
+                        Formation complète sur Zotero, le gestionnaire de références bibliographiques.
+                        Installation, collecte de références, organisation, intégration avec Word/LaTeX, plugins avancés.
+                        Optimisation du flux de recherche académique.
+                    </p>
+                    <a href="zotero/" class="card-link">accéder</a>
                 </div>
-                <p>Formation complète sur Zotero, le gestionnaire de références bibliographiques. Apprenez à organiser vos sources, générer des bibliographies automatiques et optimiser votre flux de recherche académique.</p>
-                <p><strong>Contenu :</strong> Installation, collecte de références, organisation, intégration avec Word/LaTeX, plugins avancés.</p>
-                <a href="zotero/" class="btn">Accéder à la formation</a>
             </div>
-
-            <div class="card">
-                <h2>🎓 Méthodologie de recherche</h2>
-                <div class="meta">
-                    <span class="duration">À venir</span>
-                    <span class="level">Intermédiaire</span>
-                </div>
-                <p>Guides méthodologiques pour la recherche en science politique. Conception de recherche, collecte de données, analyse qualitative et quantitative.</p>
-                <a href="#" class="btn">Bientôt disponible</a>
-            </div>
-
-            <div class="card">
-                <h2>✍️ Rédaction académique</h2>
-                <div class="meta">
-                    <span class="duration">À venir</span>
-                    <span class="level">Tous niveaux</span>
-                </div>
-                <p>Techniques et conseils pour améliorer vos compétences en rédaction académique. Structure d'un mémoire, argumentation scientifique, normes de citation.</p>
-                <a href="#" class="btn">Bientôt disponible</a>
-            </div>
-        </main>
+        </section>
 
         <section class="about">
-            <h2>À propos</h2>
-            <p>Bienvenue sur mon site personnel ! Je suis étudiant à la maîtrise en science politique à l'Université Laval et je partage ici différentes formations et ressources que j'ai développées pour accompagner les étudiants dans leur parcours académique. Mon objectif est de rendre les outils de recherche plus accessibles et d'aider mes pairs à développer leurs compétences méthodologiques et techniques.</p>
-            <p style="margin-top: 20px;"><strong>Formations disponibles :</strong> R/Analyse de données, Zotero, Méthodologie de recherche</p>
+            <h2 class="section-title">à_propos</h2>
+            <p>
+                Étudiant à la maîtrise en science politique, je m'intéresse à l'influence de l'industrie
+                technologique dans le discours législatif sur l'intelligence artificielle.
+            </p>
+            <p>
+                Je développe en R et utilise autant les méthodes qualitatives que quantitatives dans mes recherches.
+                Ce site rassemble les formations que j'ai créées pour partager mes connaissances techniques avec
+                la communauté académique.
+            </p>
         </section>
 
         <footer class="footer">
-            <p>&copy; 2024 Étienne Proulx. Toutes les formations sont disponibles gratuitement pour la communauté académique.</p>
+            <p>© 2024 étienne_proulx • formations_libres • communauté_académique</p>
         </footer>
     </div>
 </body>
