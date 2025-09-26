@@ -48,6 +48,31 @@
             color: var(--accent);
             margin-bottom: 1rem;
             letter-spacing: -1px;
+            position: relative;
+        }
+
+        .header h1::after {
+            content: '_';
+            color: var(--accent);
+            animation: blink 1s infinite;
+            margin-left: 2px;
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        @keyframes typewriter {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        .typewriter {
+            overflow: hidden;
+            white-space: nowrap;
+            width: 0;
+            animation: typewriter 2s steps(14, end) forwards;
         }
 
         .header .subtitle {
@@ -182,7 +207,7 @@
 <body>
     <div class="container">
         <header class="header">
-            <h1>étienne_proulx</h1>
+            <h1 class="typewriter">étienne_proulx</h1>
             <p class="subtitle">
                 étudiant.recherche(science_politique) • influence_industrie_techno → discours_législatif_IA •
                 R.developer() • méthodes.quali() && méthodes.quanti()
