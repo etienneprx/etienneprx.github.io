@@ -15,12 +15,12 @@
         }
 
         :root {
-            --bg-primary: #0a0a0a;
-            --bg-secondary: #1a1a1a;
-            --text-primary: #e0e0e0;
-            --text-secondary: #a0a0a0;
-            --accent: #00ff88;
-            --border: #333;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8f8f8;
+            --text-primary: #1a1a1a;
+            --text-secondary: #666666;
+            --accent: #00aa55;
+            --border: #d0d0d0;
         }
 
         body {
@@ -45,10 +45,11 @@
         .header h1 {
             font-size: 2.5rem;
             font-weight: 700;
-            color: var(--accent);
+            color: var(--text-primary);
             margin-bottom: 1rem;
             letter-spacing: -1px;
             position: relative;
+            display: inline-block;
         }
 
         .header h1::after {
@@ -63,17 +64,6 @@
             51%, 100% { opacity: 0; }
         }
 
-        @keyframes typewriter {
-            from { width: 0; }
-            to { width: 100%; }
-        }
-
-        .typewriter {
-            overflow: hidden;
-            white-space: nowrap;
-            width: 0;
-            animation: typewriter 2s steps(14, end) forwards;
-        }
 
         .header .subtitle {
             font-size: 1rem;
@@ -89,11 +79,14 @@
 
         .section-title {
             font-size: 1.2rem;
-            color: var(--accent);
+            color: var(--text-primary);
             margin-bottom: 1.5rem;
             font-weight: 500;
             text-transform: uppercase;
             letter-spacing: 2px;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 0.5rem;
+            display: inline-block;
         }
 
         .grid {
@@ -155,7 +148,39 @@
 
         .card-link:hover {
             background: var(--accent);
-            color: var(--bg-primary);
+            color: #ffffff;
+        }
+
+        .contact {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .contact-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-primary);
+            text-decoration: none;
+            padding: 0.75rem 1.25rem;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            background: var(--bg-secondary);
+        }
+
+        .contact-item:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .contact-item::before {
+            content: ">";
+            color: var(--accent);
+            font-weight: bold;
         }
 
         .card-link.external::after {
@@ -207,12 +232,31 @@
 <body>
     <div class="container">
         <header class="header">
-            <h1 class="typewriter">étienne_proulx</h1>
+            <h1>étienne_proulx</h1>
             <p class="subtitle">
                 étudiant.recherche(science_politique) • influence_industrie_techno → discours_législatif_IA •
                 R.developer() • méthodes.quali() && méthodes.quanti()
             </p>
         </header>
+
+        <section class="about">
+            <h2 class="section-title">à_propos</h2>
+            <p>
+                Étudiant à la maîtrise en science politique, je m'intéresse à l'influence de l'industrie
+                technologique dans le discours législatif sur l'intelligence artificielle.
+            </p>
+            <p>
+                Je développe en R et utilise autant les méthodes qualitatives que quantitatives dans mes recherches.
+                Ce site rassemble les formations que j'ai créées pour partager mes connaissances techniques avec
+                la communauté académique.
+            </p>
+            <div class="contact">
+                <a href="mailto:etienne.proulx.2@ulaval.ca" class="contact-item">email</a>
+                <a href="https://github.com/etienneprx" class="contact-item" target="_blank">github</a>
+                <a href="https://www.linkedin.com/in/%C3%A9tienne-proulx-823010304/" class="contact-item" target="_blank">linkedin</a>
+                <a href="https://orcid.org/0009-0005-8671-1018" class="contact-item" target="_blank">orcid</a>
+            </div>
+        </section>
 
         <section class="section">
             <h2 class="section-title">formations</h2>
@@ -246,19 +290,6 @@
                     <a href="zotero/" class="card-link">accéder</a>
                 </div>
             </div>
-        </section>
-
-        <section class="about">
-            <h2 class="section-title">à_propos</h2>
-            <p>
-                Étudiant à la maîtrise en science politique, je m'intéresse à l'influence de l'industrie
-                technologique dans le discours législatif sur l'intelligence artificielle.
-            </p>
-            <p>
-                Je développe en R et utilise autant les méthodes qualitatives que quantitatives dans mes recherches.
-                Ce site rassemble les formations que j'ai créées pour partager mes connaissances techniques avec
-                la communauté académique.
-            </p>
         </section>
 
         <footer class="footer">
