@@ -1,0 +1,227 @@
+\documentclass[11pt,letterpaper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvcolor{black}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% adjust the page margins
+\usepackage[scale=0.85]{geometry}
+\setlength{\footskip}{136.00005pt}                 % depending on the amount of information in the footer, you need to change this value. comment this line out and set it to the size given in the warning
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvheadnamewidth}{10cm}            % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% font loading
+% for luatex and xetex, do not use inputenc and fontenc
+% see https://tex.stackexchange.com/a/496643
+\ifxetexorluatex
+  \usepackage{fontspec}
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Ligatures=TeX}
+  \setmainfont{Latin Modern Roman}
+  \setsansfont{Latin Modern Sans}
+  \setmonofont{Latin Modern Mono}
+  \setmathfont{Latin Modern Math} 
+\else
+  \usepackage[T1]{fontenc}
+  \usepackage{lmodern}
+\fi
+
+% document language
+\usepackage[french]{babel}  % FIXME: using spanish breaks moderncv
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyfoot[C]{Étienne Proulx} % Your name in the center of the footer
+\renewcommand{\headrulewidth}{0pt} % Remove header rule
+
+% personal data
+\name{Étienne}{Proulx}
+\title{Curriculum vitae}
+%\born{4 July 1776}                                 % optional, remove / comment the line if not wanted
+\address{684-4 rue Sutherland}{G1R 2Y7, Québec}{Canada}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+\phone[mobile]{+1~(438)~389-6829}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
+%\phone[fixed]{+2~(345)~678~901}
+%\phone[fax]{+3~(456)~789~012}
+\email{etienne.proulx.2@ulaval.ca}
+%\homepage{alexandrefortierchouinard.com}
+
+% Social icons
+%\social[linkedin]{SkelAlex}
+%\social[xing]{john\_doe}
+%\social[twitter]{SkelAlex}
+%\social[github]{SkelAlex}
+% \social[stackoverflow]{0000000/johndoe}
+% \social[bitbucket]{jdoe}
+% \social[skype]{jdoe}
+\social[orcid]{0009-0005-8671-1018}
+% \social[researchgate]{jdoe}
+% \social[researcherid]{jdoe}
+% \social[telegram]{jdoe}
+% \social[whatsapp]{12345678901}
+% \social[signal]{12345678901}
+% \social[matrix]{@johndoe:matrix.org}
+%\social[googlescholar]{hTlygHMAAAAJ}
+
+
+\begin{document}
+\makecvtitle
+
+\section{Éducation}
+  \cventry{2024--}{Maîtrise en science politique}{Université Laval}{Québec, Canada.}{}{Scolarité complétée (moyenne: 4,28/4,33). Prévu pour 2026}
+  \cventry{Été 2025}{ICPSR Summer Program in Quantitative Methods}{University of Michigan}{Ann Arbor, États-Unis.}{}{Première session}
+  \cventry{Août 2024}{École interdisciplinaire outils \& méthodes (EIOM)}{Université Laval}{Québec, Canada.}{}{Note finale: A+}
+  \cventry{2021--2024}{Baccalauréat intégré en affaires publiques et relations internationales}{Université Laval}{Québec, Canada.}{}{Moyenne cumulative: 4,11/4,3}
+  \cventry{2019--2021}{DEC en sciences naturelles, profil santé}{Cégep Édouard-Montpetit}{Longueuil, Canada.}{}{Cote R: 33}
+
+\section{Expérience professionnelle}
+
+\cventry{2025--Présent}{Chargé de projet}{Vitrine Démocratique}{Université Laval, Québec}{}{Centre d'analyse des politiques publiques (CAPP)\\
+ • Projet de recherche numérique qui présente les données du CAPP sur la couverture médiatique canadienne et québécoise.}
+
+\cventry{Hiver 2026}{Auxiliaire d'enseignement}{POL-2000 Méthodologie quantitative}{Université Laval, Québec}{}{}
+
+\cventry{Hiver 2026}{Auxiliaire d'enseignement}{POL-2425 Persuasion et opinion publique}{Université Laval, Québec}{}{}
+
+\cventry{Automne 2025}{Auxiliaire d'enseignement}{POL-2000 Méthodologie quantitative}{Université Laval, Québec}{}{}
+\cventry{Automne 2025}{Auxiliaire d'enseignement}{POL-2201 Analyse des politiques gouvernementales}{Université Laval, Québec}{}{}
+  \cventry{2025}{Analyste de données}{Datagotchi Canada 2025}{Université Laval, Québec}{}{Chaire de leadership en enseignement des sciences sociales numériques (CLESSN)\\
+  • Datagotchi est une application ludique et éducative qui offre des prédictions personnalisées basées sur les habitudes de vie et les aspects socio-démographiques, avec un accent sur les élections canadiennes.\\
+  • Fruit d'une collaboration académique interdisciplinaire, Datagotchi combine expertise et innovation pour fournir des analyses accessibles à tous.}
+  
+  \cventry{2024}{Assistant de recherche}{Projet de recherche sur les dépenses fiscales au Québec}{Université Laval, Québec}{}{Centre d'analyse des politiques publiques\\
+  • Réalisation d'analyses textuelles des discours parlementaires.}
+  
+  \cventry{2024}{Analyste de données}{Datagotchi US 2024}{Université Laval, Québec}{}{Chaire de leadership en enseignement des sciences sociales numériques (CLESSN)}
+  
+  \cventry{2024}{Assistant de recherche}{Chaire de recherche sur la culture visuelle dans les études internationales}{Université Laval, Québec}{}{• Développement d'une méthode innovante d'analyse d'images en sciences sociales avec l'aide de l'IA générative.}
+  
+  \cventry{2023-2025}{Assistant de recherche}{Polimètre}{Université Laval, Québec}{}{Chaire de leadership en enseignement des sciences sociales numériques (CLESSN)\\
+  • Le Polimètre est une initiative indépendante développée par des politologues qui suit si les politiciens respectent les promesses qu'ils font.}
+  
+  \cventry{2023--2024}{Analyste de données}{Projet Quorum}{Université Laval, Québec}{}{Chaire de leadership en enseignement des sciences sociales numériques (CLESSN)\\
+  • Le Projet Quorum est une application Web multidisciplinaire qui permet aux Québécois de prendre le pouls de leur société en temps réel et de comprendre l'humeur et les perceptions des décideurs publics, des médias et de l'opinion publique générale sur les enjeux du jour.}
+  
+  \cventry{2023--2024}{Coordonnateur de projet}{Projet Chatbot-parties}{Université Laval, Québec}{}{Chaire de leadership en enseignement des sciences sociales numériques (CLESSN)\\
+  • Développement d'une plateforme ludique pour interagir avec des bots de partis politiques.}
+  
+  \cventry{2023--2024}{Analyste de données}{Datagotchi-Japon}{Université Laval, Québec}{}{Chaire de leadership en enseignement des sciences sociales numériques (CLESSN)\\
+  • Éducatif et ludique, Datagotchi est le premier sondage entièrement illustré faisant des prédictions basées sur vos habitudes de vie.}
+  
+  \cventry{2022--2023}{Assistant de recherche}{Chaire de recherche du Canada en immigration et sécurité}{Université Laval, Québec}{}{• Construction d'une base de données par l'encodage de discours politiques.}
+
+\section{Bourses et distinctions}
+  \cventry{2025}{Bourse méthodologie}{Centre pour l'étude de la citoyenneté démocratique (CÉCD)}{}{}{3 000 \$}
+  \cventry{2025}{Subvention de recherche}{Centre d'analyse des politiques publiques, Université Laval}{}{}{1 000 \$}
+  \cventry{2025}{Bourse du Fonds général pour les études supérieures (FGES)}{Conseil de recherche en sciences humaines du Canada (CRSH)}{}{}{1500 \$}
+  \cventry{2025}{Bourse de formations méthodologiques}{Fonds Vincent-Lemieux, Université Laval}{}{}{2 000 \$}
+    \cventry{2025}{Bourse de déplacement (conférences)}{Centre pour l'étude de la citoyenneté démocratique (CÉCD)}{}{}{1 000 \$}
+  \cventry{2025--2026}{Bourse de recherche à la maîtrise}{Fonds de recherche du Québec}{}{}{20 000 \$}
+  \cventry{2024--2025}{Bourse d'études supérieures du Canada - Programme de maîtrise}{Conseil de recherche en sciences humaines du Canada (CRSH)}{}{}{27 000 \$}
+  \cventry{2024--2025}{Bourse de recherche à la maîtrise}{Fonds de recherche du Québec}{Décliné}{}{20 000 \$}
+  \cventry{2024}{Tableau d'honneur de la Faculté des sciences sociales}{Université Laval}{}{}{Pour excellence académique au baccalauréat}
+  \cventry{2023}{Bourse de mobilité}{Bureau international}{Université Laval}{}{3000 \$}
+  \cventry{2023}{Subvention}{Chaire de recherche du Canada en immigration et sécurité}{}{}{5 000 \$}
+  \cventry{2020}{Bourse Odyssée pour l'implication étudiante}{Cégep Édouard-Montpetit}{}{}{500 \$}
+  \cventry{2019}{Prix du Mérite en Histoire du Mouvement national des Québécois}{}{}{}{}
+  \cventry{2019}{Élève athlète par excellence}{Meilleure moyenne académique}{Programme Sport-Études Baseball de Mortagne}{}{}
+
+\section{Publications}
+\subsection{\textbf{Articles dans des revues scientifiques avec révision par les pairs}}
+\begin{itemize}
+  \item Foisy, L.-O. M., Proulx, É., Cadieux, H., Gilbert, J., Rivest, J., Bouillon, A., et Dufresne, Y. (2025). "Prompting the Machine: Introducing an LLM Data Extraction Method for Social Scientists". Social Science Computer Review, 0(0). https://doi.org/10.1177/08944393251344865
+  \item Pelletier, C., Proulx, É., Foisy, L.-O. M., Drouin, J., Cadieux, H., et Dufresne, Y. (2025). "Religiosity in Times of Crisis: Uncovering Canadians' Responses to COVID-19 through Terror Management Theory". Mental Health, Religion \& Culture. Accepté.
+    \item Tremblay-Antoine, C., Fortier-Chouinard, A., Cloutier, A., Proulx, É., et Dufresne, Y. (2024). "Weighting Pledge Trackers Scores: A Measure Based on Pledge Salience". Canadian Political Science Review. Accepté.
+\end{itemize}
+
+\subsection{\textbf{Articles de conférence}}
+\begin{itemize}
+    \item Fortier-Chouinard, A., Carignan, B., Proulx, É., et Dinan, S. (juillet 2025). "More Attention, More Action? The Determinants of Improvements in Fulfillment Status". Atelier du Comparative Pledges Project (CPP). University of Göttingen, Göttingen, Allemagne.
+    \item Proulx, É., Rivest, J., Pelletier, C., Labonté, E., Beaulé, A., Foisy, L.-O. M., et Dufresne, Y. (avril 2025). "Cultural Dimensions of AI Perceptions: A Comparative Study of Public Attitudes Toward Artificial Intelligence in Japan and Canada". Midwest Political Science Association 2025 Conference. Chicago.
+    \item Foisy, L.-O. M., Pelletier, C., Proulx, É., Vincent, S., Temporão, M., et Dufresne, Y. (avril 2025). "Beyond Language Barriers: Evaluating the Efficacy of Large Language Models in Analyzing Sentiment in Non-English Textual Data". Midwest Political Science Association 2025 Conference. Chicago.
+    \item Pelletier, C., Foisy, L.-O. M., Drouin, J., Gervasi, K., Proulx, É., et Dufresne, Y. (avril 2025). "Beyond Church and State: Investigating Attitudes on Abortion in the 2024 US Elections". Midwest Political Science Association 2025 Conference. Chicago.
+    \item Pelletier, C., Proulx, É., Foisy, L.-O. M., Cadieux, H., et Dufresne, Y. (juin 2024). "La Pandémie de COVID-19 Au Canada : À Travers Le Prisme de La Peur de La Mort et de La Religiosité". Canadian Political Science Association 2024 Conference. Montréal.
+    \item Proulx, É. (janvier 2024). "Zooming on the Zoomers: A Comprehensive Analysis of Quebec's Shifting Independence Dynamics". Southern Political Science Association 2024 Conference. New Orleans.
+\end{itemize}
+
+\subsection{\textbf{Contributions dans des ouvrages collectifs}}
+\begin{itemize}
+  \item Fortier-Chouinard, A. et Proulx, É. (2025). "Introduction Aux Langages de Balisages Dans La Rédaction En Sciences Sociales". Dans Cloutier, A., Dufresne, Y., et Bibeau-Gagnon, A., Outils de recherche en sciences sociales numériques. Les Presses de l'Université Laval.
+\end{itemize}
+
+\subsection{\textbf{Publications à venir}}
+\begin{itemize}
+    \item Proulx, É., Jacob, S., Beaulé, A., Dinan, S., et Dufresne, Y. (2026). "AI Politics and Regulation in the European Parliament: Ideological Divides and Policy Convergence Before and After ChatGPT". British Journal of Political Science. Soumis.
+    \item Proulx, É., Cadieux, H., Bouillon, A., et Dufresne, Y. (2025). "Zooming on the Zoomers: A Comprehensive Analysis of Quebec's Shifting Secession Dynamics". Nations and Nationalism. Revise and resubmit.
+    \item Foisy, L.-O. M., Pelletier, C., Proulx, É., Cadieux, H., Temporão, M., et Dufresne, Y. (2025). "From Checkbox to Textbox: Can LLM-processed Open-Ended Questions Measure the Same Latent Factors as Traditional Closed-Ended Questions?". British Journal of Political Science. Soumis.
+
+\end{itemize}
+
+\section{Affiliations de recherche}
+\begin{itemize}
+  \item Membre, Groupe de recherche en communication politique (GRCP)
+  \item Membre, L'Observatoire international sur les impacts sociétaux de l'IA et du numérique (OBVIA)
+  \item Membre, Chaire de leadership en enseignement des sciences sociales numériques (CLESSN), Université Laval
+  \item Membre, Centre pour l'étude de la citoyenneté démocratique (CÉCD)
+  \item Membre, Centre d'analyse des politiques publiques (CAPP), Université Laval
+\end{itemize}
+
+\section{Communications}
+\begin{itemize}
+   
+    \item "Initiation à l'analyse des données avec R", Centre d'appui à la réussite, Faculté des lettres et des sciences humaines, Université Laval, Québec, Canada, 26 septembre 2025. (Présentation invitée)
+
+    \item "Atelier sur les outils de rédaction numériques en sciences sociales", École interdisciplinaire outils \& méthodes (EIOM), Québec, Canada, 29 septembre 2025. (Présentation invitée)
+    \item "Cultural Dimensions of AI Perceptions: A Comparative Study of Public Attitudes Toward Artificial Intelligence in Japan and Canada", Midwest Political Science Association Annual Conference, Chicago, États-Unis, 3-6 avril 2025. (Présentation)
+  \item "Cultural Dimensions of AI Perceptions: A Comparative Study of Public Attitudes Toward Artificial Intelligence in Japan and Canada", Centre for the Study of Democratic Citizenship Student and Post-Doctoral Fellow Conference, Québec, Canada, 21 février 2025. (Présentation)
+  \item "Cliniques d’entraide sur l’analyse de données avec R", Faculté des sciences sociales, Université Laval, Québec, Canada, 22 novembre 2024. (Atelier)
+  \item "Les bases de Zotero", Cours POL-6078 Outils numériques de recherche, Université Laval, Québec, Canada, octobre 2024. (Présentation invitée)
+  \item "Atelier sur les langages de balisage", Cours POL-2000 Méthodologie quantitative, Université Laval, Québec, Canada, 28 février 2024. (Présentation invitée)
+  \item "Rencontrer l’humain: bibliothèque humaine", Table ronde de programmation citoyenne, Assemblée nationale du Québec, Québec, Canada, 27 janvier 2024. (Participant invité)
+  \item "Zooming on the Zoomers: A Comprehensive Analysis of Quebec's Shifting Secession Dynamics", Southern Political Science Association Annual Conference, New Orleans, États-Unis, 10-13 janvier 2024. (Présentation)
+\end{itemize}
+
+\section{Apparitions médiatiques}
+\begin{itemize}
+  \item "Que restera-t-il du legs de Justin Trudeau?", Radio-Canada, 20 mars 2025. (Contribution)
+  \item "Grève générale à l'Université Laval : « la session ne sera pas prolongée »", Radio-Canada, 2 mars 2023. (Entrevue)
+  \item "Le cégep Édouard-Montpetit veut un retour des étudiants", FM103,3, 22 mars 2021. (Entrevue)
+  \item "Rattrapage du 18 mars 2021 : Littérature québécoise, et retour au cégep", Le 15-18, Radio-Canada, 18 mars 2021. (Entrevue radio)
+\end{itemize}
+
+\section{Enseignement}
+\begin{itemize}
+  \item "Analyse d'images en sciences sociales", Cours FAS-1001 Introduction aux mégadonnées en sciences sociales, Université Laval, Québec, Canada, 27 mars 2025. (Cours invité - 3 heures)
+\end{itemize}
+
+\section{Implications}
+\begin{itemize}
+    \item "L'Intelligence artificielle en recherche : Objet d'étude et outil méthodologique", Cours LMO-1000 Introduction aux études internationales et langues modernes, Université Laval, Québec, Canada, 2 décembre 2025. (Atelier invité)
+    \item Représentant aux affaires externes, Association des politologues étudiants de l'Université Laval (APEUL), 2025-2026
+  \item Coordonnateur des affaires externes, Association des étudiants en sciences sociales, Université Laval, 2022-2023
+  \item Coordonnateur du comité environnement, Association étudiante des affaires publiques et relations internationales, Université Laval, 2021-2022
+  \item Membre du comité des subventions, Association des étudiants en sciences sociales, Université Laval, 2021-2022
+  \item Membre du comité d'action sociale, Association étudiante des affaires publiques et relations internationales, Université Laval, 2021-2022
+  \item Exécutif aux communications, Association générale du Cégep Édouard-Montpetit, 2020-2021
+  \item Assistant exécutif pour les affaires académiques, Association générale du Cégep Édouard-Montpetit, 2020
+  \item Relance du Comité d'action politique (CAP) du Cégep Édouard-Montpetit, 2019
+\end{itemize}
+
+\section{Compétences}
+\begin{itemize}
+  \item Théories politiques, communication politique, opinion publique (avancé)
+  \item Microsoft Office, programmation en R, \LaTeX{} (intermédiaire)
+  \item IA, apprentissage automatique (débutant)
+  \item Langues : français (langue maternelle), anglais (maîtrise professionnelle complète)
+\end{itemize}
+
+\section{Références}
+\begin{itemize}
+  \item Prof. Yannick Dufresne, Professeur titulaire, Département de science politique, Université Laval\\
+     yannick.dufresne@pol.ulaval.ca
+  \item Prof. Shannon Dinan, Professeur agrégée, Département de science politique, Université Laval\\
+ shannon.dinan@pol.ulaval.ca
+\end{itemize}
+
+\end{document}
